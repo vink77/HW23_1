@@ -7,16 +7,6 @@ from catalog.models import Category, Product, Version
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 
 
-# Create your views here.
-
-#def index(request):
-#    product_list = Product.objects.all()
-#    context = {
-#        'objects_list': product_list
-#    }
-#    return render(request, 'catalog/index.html', context=context)
-
-
 def contacts(request):
     return render(request,'catalog/contacts.html')
 
