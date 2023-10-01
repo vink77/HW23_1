@@ -12,17 +12,34 @@
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                            {{ form.as_p }}
+                        {{ form.as_p }}
+                        <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Версия товара
+                            <div class="card-body">
+                                {{ formset.management_form }}
+                                {% for form in formset.forms %}
+                                {{ form.as_p }}
+
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
                             <button type="submit" class="btn btn-outline-secondary">
-                                {% if object %}
-                                Сохранить
-                                {% else %}
-                                Создать
-                                {% endif %}</button>
+                            {% if object %}
+                            Сохранить
+                            {% else %}
+                            Создать
+                            {% endif %}
+                        </button>
                     </form>
+                </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
+        {% endblock %}
