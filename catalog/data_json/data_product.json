@@ -1,0 +1,87 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "product_name": "ASUS RT-15",
+      "product_description": "- хорошо сосёт",
+      "avatar":  "products/noutbook.jpg",
+      "category": 6,
+      "price": 80000,
+      "quantity_product": 5,
+      "date_create": "2023-09-13",
+      "date_last_change": "2023-09-14"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "product_name": "Gorenje GR-800",
+      "product_description": "- хорошо греет 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34",
+      "avatar":  "products/micro.jpg",
+      "category": 5,
+      "price": 5000,
+      "quantity_product": 5,
+      "date_create": "2023-09-13",
+      "date_last_change": "2023-09-13"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "product_name": "Samsung S-500",
+      "product_description": "- хорошо звонит",
+      "avatar":  "products/smartphone.jpg",
+      "category": 2,
+      "price": 50000,
+      "quantity_product": 5,
+      "date_create": "2023-09-13",
+      "date_last_change": "2023-09-13"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "product_name": "Буран",
+      "product_description": "- хорошо сосёт",
+      "avatar":  "products/пылесос.png",
+      "category": 7,
+      "price": 27,
+      "quantity_product": 5,
+      "date_create": "2023-09-13",
+      "date_last_change": "2023-09-13"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "product_name": "XEROX-21",
+      "product_description": "- хорошо печатает",
+      "avatar":  "products/printer.jpg",
+      "category": 4,
+      "price": 20000,
+      "quantity_product": 0,
+      "date_create": "2023-09-13",
+      "date_last_change": "2023-09-13"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "product_name": "Samsung -UTV57",
+      "product_description": "- хорошо показывает новости",
+      "avatar":  "products/tv.jpg",
+      "category": 1,
+      "price": 50000,
+      "quantity_product": 5,
+      "date_create": "2023-09-13",
+      "date_last_change": "2023-09-13"
+    }
+  }
+]
+
