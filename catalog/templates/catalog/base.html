@@ -34,8 +34,11 @@
               <h4 class="text-white">Contact</h4>
               <ul class="list-unstyled">
                 <li><a href="/blog/" class="text-white">Блог магазина </a></li>
-                <li><a href="/users/" class="text-white">Вход в учетную запись</a></li>
-
+                  {% if user.is_authenticated %}
+                <li><a href="logout" class="text-white">Выйти</a></li>
+                  {% else %}
+                <li><a href="/users/" class="text-white">Войти</a></li>
+                  {% endif %}
                 <li><a href="#" class="text-white">Email me</a></li>
               </ul>
             </div>
