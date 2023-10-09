@@ -148,6 +148,12 @@ LOGIN_URL = '/users/'
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'vinktest@yandex.ru'
-EMAIL_HOST_PASSWORD = 'qaws2143'
+#EMAIL_HOST_USER = 'vinktest@yandex.ru'
+#EMAIL_HOST_PASSWORD = 'Qaws2143'
+EMAIL_HOST_USER = 'vink.ne@yandex.ru'
+EMAIL_HOST_PASSWORD = 'mg94zmln'
+
+
+
 EMAIL_USE_SSL = True
+CSFR_TRUSTED_ORIGINES = ['http://127.0.0.1']
