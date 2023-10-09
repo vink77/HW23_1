@@ -148,10 +148,9 @@ LOGIN_URL = '/users/'
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-#EMAIL_HOST_USER = 'vinktest@yandex.ru'
-#EMAIL_HOST_PASSWORD = 'Qaws2143'
-EMAIL_HOST_USER = 'vink.ne@yandex.ru'
-EMAIL_HOST_PASSWORD = 'mg94zmln'
+EMAIL_HOST_USER = 'vinktest@yandex.ru'
+EMAIL_HOST_PASSWORD = 'Qaws2143'
+
 
 
 
