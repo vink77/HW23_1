@@ -35,10 +35,11 @@
               <ul class="list-unstyled">
                 <li><a href="/blog/" class="text-white">Блог магазина </a></li>
                   {% if user.is_authenticated %}
-                <li><a href="logout" class="text-white">Выйти</a></li>
+                <li class="last"><a href="{% url 'users:profile' %}" class="text-white">Профиль | </a>><a href="{% url 'users:logout' %}" class="text-white">Выйти</a></li>
                   {% else %}
-                <li><a href="/users/" class="text-white">Войти</a></li>
+                <li class="last"><a href="{% url 'users:register' %}" class="text-white">Регистрация |</a> <a href="{% url 'users:login' %}" class="text-white">Войти</a></li>
                   {% endif %}
+              3,
                 <li><a href="#" class="text-white">Email me</a></li>
               </ul>
             </div>
@@ -65,9 +66,9 @@
           <h1 class="jumbotron-heading">Магазин электроники ElektroStore</h1>
           <p class="lead text-muted">Магазин электроники ElektroStore - это отличный вариант вложения ваших денежных средств</p>
           <p>
-            <a  class="btn btn-primary my-2" href="/" >Каталог</a>
-            <a  class="btn btn-secondary my-2" href="/contacts" >Контакты</a>
-            <a  class="btn btn-secondary my-2" href="/create" >Добавить товар</a>
+            <!--<a  class="btn btn-primary my-2" href="catalog/list" >Каталог</a>
+            #<a  class="btn btn-secondary my-2" href="catalog/contacts" >Контакты</a>
+            #<a  class="btn btn-secondary my-2" href="catalog/create" >Добавить товар</a> -->
 
           </p>
         </div>

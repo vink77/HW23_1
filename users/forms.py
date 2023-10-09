@@ -4,7 +4,14 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from users.models import User
 
 
-class UserRegisterForm(UserCreationForm):
+class StyleFormMixin:
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
+
+
+class UserRegisterForm(StyleFormMixin, UserCreationForm):
     """
     Форма регистрации пользователя
     """
@@ -20,7 +27,7 @@ class UserRegisterForm(UserCreationForm):
 
         # передаем в шаблон контроль формы
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['class'] = 'form-input'
 
 
 class UserProfileForm(UserChangeForm):
@@ -43,3 +50,6 @@ class UserProfileForm(UserChangeForm):
         # передаем в шаблон контроль формы
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+
+class PasswordRecoveryForm(forms.Form):
+    email = forms.EmailField(label='Email')
