@@ -6,6 +6,9 @@ from catalog.forms import ProductForm, VersionForm
 from catalog.models import Category, Product, Version
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 
+from catalog.services import get_categories
+from config import settings
+
 
 def contacts(request):
     return render(request,'catalog/contacts.html')
@@ -58,9 +61,11 @@ class ProductListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         products = Product.objects.all()
+        categories = get_categories()
         for product in products:
             product.active_version = product.versions.filter(is_active=True).first()
         context['products'] = products
+        context['categories'] = categories
         return context
 
 
@@ -74,6 +79,17 @@ class ProductDetailView(DetailView):
         self.object.save()
         return self.object
 
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        VersionFormset = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
+        if self.request.method == 'POST':
+            formset = VersionFormset(self.request.POST, instance=self.object)
+        else:
+            formset = VersionFormset(instance=self.object)
+
+        context_data['formset'] = formset
+
+        return context_data
 
 
 class ProductDeleteView(DeleteView):
